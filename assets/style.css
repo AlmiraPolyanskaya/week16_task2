@@ -1,0 +1,39 @@
+body {
+	background-color: rgba(249, 190, 123, 0.559);
+}
+
+section {
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+form {
+	border: 1px dotted black;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+h1, h2 {
+	text-align: center;
+}
+
+button {
+	width: 140px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 6px 3px 3px black;
+	align-self: center;
+	transform: 15ms;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+/* input[type="text"],.error {
+	background-color: red;
+} */

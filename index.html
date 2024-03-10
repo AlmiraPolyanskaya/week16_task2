@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 15 task 2</title>
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Неделя 16. Задание 2</h1>
+        <h2>Форма регистрации с валидацией всех полей</h2>
+        <section>
+            <div class="form">
+                <form name="registrationForm">
+                    <label for="name" class="form__label">Имя:</label>
+                    <input type="text" id="name" name="name" class="form__input" placeholder="Ваше имя" required />
+                    <p class="name-error-message" id="nameErrorMessage"></p>
+                    <br />
+
+                    <label for="email" class="form__label">Email:</label>
+                    <input type="email" id="email" name="email" class="form__input" placeholder="NameSurname@smth.com"
+                        required />
+                    <p class="email-error-message" id="emailErrorMessage"></p>
+                    <br />
+
+                    <label for="age" class="form__label">Возраст:</label>
+                    <input type="number" max=120 min=18 id="age" name="age" class="form__input" placeholder="С 18 лет"
+                        required />
+                    <p class="age-error-message" id="ageErrorMessage"></p>
+                    <br />
+
+                    <label class="form__label">Ваш пол:</label>
+                    <br />
+                    <div>
+                        <input type="radio" id="female" name="radio" value="female" class="form__input" />
+                        <label for="female">Женский</label>
+                    </div>
+                    <br />
+                    <div>
+                        <input type="radio" id="male" name="radio" value="male" class="form__input" />
+                        <label for="male">Мужской</label>
+                    </div>
+                    <p class="sex-error-message" id="sexErrorMessage"></p>
+
+                    <label for="select" class="form__label">Выберите профессию:</label>
+                    <select id="selectProfession" name="select" required>
+                        <option value="" disabled selected>-Выберите вариант-</option>
+                        <option value="option1">Врач</option>
+                        <option value="option2">Программист</option>
+                        <option value="option3">Учитель</option>
+                        <option value="option4">Дизайнер</option>
+                        <option value="option5">Инженер</option>
+                        <option value="option6">Продавец</option>
+                        <option value="option7">Другое</option>
+                    </select>
+                    <p class="selectProfession-error-message" id="selectProfessionErrorMessage"></p>
+                    <br />
+
+                    <label for="password" class="form__label">Пароль:</label>
+                    <input type="text" id="password" name="password" class="form__input" placeholder="Придумайте пароль"
+                        minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Пароль должен содержать минимум 8 символов, хотя бы одну цифру, одну заглавную букву и одну строчную букву"
+                        required />
+                    <p class="password-error-message" id="passwordErrorMessage"></p>
+                    <br />
+
+                    <label class="form__label">Я даю согласие на обработку данных</label>
+                    <br />
+                    <div class="flex">
+                        <input type="checkbox" id="agreement" name="checkboxOne" class="form__checkbox" required />
+                        <label for="agreement">Согласен</label>
+                    </div>
+                    <p class="agreement-error-message" id="agreementErrorMessage"></p>
+
+                    <button type="submit" id="submitButton" name="button" class="form__submit">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
